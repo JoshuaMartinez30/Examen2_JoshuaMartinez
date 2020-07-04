@@ -832,6 +832,8 @@ public class Inicio extends javax.swing.JFrame {
             tf_TipoPantalla.setText("");
             jsp_Nucleos.setValue(0);
             tf_Velocidad.setText("");
+            tf_ColorC.setText("");
+            tf_ColorTeclado.setText("");
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(JD_CrearT, "Error, No se creo Tecnico");
