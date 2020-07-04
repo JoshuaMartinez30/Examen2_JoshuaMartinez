@@ -56,8 +56,8 @@ public class AdminReporte {
             try {
                 fw = new FileWriter(archivo, false);
                 bw = new BufferedWriter(fw);
-                bw.write("SE REPORTO UN FALLO A LAS: " + new Date() + "\n");
-                bw.write(en.getTecnico().getNombre() + "fallo en ensamblar.\n");
+                bw.write("Fallo a las: " + new Date() + "\n");
+                bw.write("fallo: "+en.getTecnico().getNombre() +"\n");
                 bw.write("Computadora con numero de serie: " + en.getComputadora().getSerie());
                 bw.write("\n------------------------------------------------------------------------");
                 bw.flush();

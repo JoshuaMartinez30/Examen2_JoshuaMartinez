@@ -121,9 +121,6 @@ public class Inicio extends javax.swing.JFrame {
         btnModificar = new javax.swing.JButton();
         jLabel28 = new javax.swing.JLabel();
         btnEliminar = new javax.swing.JButton();
-        JD_AdminC = new javax.swing.JDialog();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         grupoC = new javax.swing.ButtonGroup();
         jTextField13 = new javax.swing.JTextField();
         grupoTeclado = new javax.swing.ButtonGroup();
@@ -142,7 +139,6 @@ public class Inicio extends javax.swing.JFrame {
         jmi_CrearT = new javax.swing.JMenuItem();
         jmi_CrearC = new javax.swing.JMenuItem();
         jmi_AdminT = new javax.swing.JMenuItem();
-        jmi_AdminC = new javax.swing.JMenuItem();
         jmi_Ensamblaje = new javax.swing.JMenuItem();
 
         jLabel1.setText("Nombre");
@@ -618,27 +614,6 @@ public class Inicio extends javax.swing.JFrame {
                 .addGap(34, 34, 34))
         );
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane3.setViewportView(jTextArea1);
-
-        javax.swing.GroupLayout JD_AdminCLayout = new javax.swing.GroupLayout(JD_AdminC.getContentPane());
-        JD_AdminC.getContentPane().setLayout(JD_AdminCLayout);
-        JD_AdminCLayout.setHorizontalGroup(
-            JD_AdminCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JD_AdminCLayout.createSequentialGroup()
-                .addContainerGap(73, Short.MAX_VALUE)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64))
-        );
-        JD_AdminCLayout.setVerticalGroup(
-            JD_AdminCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JD_AdminCLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(66, Short.MAX_VALUE))
-        );
-
         jTextField13.setText("jTextField13");
 
         jLabel32.setText("Computadoras");
@@ -747,14 +722,6 @@ public class Inicio extends javax.swing.JFrame {
         });
         jMenu1.add(jmi_AdminT);
 
-        jmi_AdminC.setText("Administrar Computadora");
-        jmi_AdminC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmi_AdminCActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jmi_AdminC);
-
         jmi_Ensamblaje.setText("Ensamblaje");
         jmi_Ensamblaje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -801,13 +768,6 @@ public class Inicio extends javax.swing.JFrame {
         JD_AdminT.setLocationRelativeTo(null);
         JD_AdminT.setVisible(true);
     }//GEN-LAST:event_jmi_AdminTActionPerformed
-
-    private void jmi_AdminCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_AdminCActionPerformed
-        JD_AdminC.setModal(true);
-        JD_AdminC.pack();
-        JD_AdminC.setLocationRelativeTo(null);
-        JD_AdminC.setVisible(true);
-    }//GEN-LAST:event_jmi_AdminCActionPerformed
 
     private void btnAgregarTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarTActionPerformed
         try {
@@ -993,7 +953,6 @@ public class Inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup GrupoPantalla;
-    private javax.swing.JDialog JD_AdminC;
     private javax.swing.JDialog JD_AdminT;
     private javax.swing.JDialog JD_CrearC;
     private javax.swing.JDialog JD_CrearT;
@@ -1049,17 +1008,14 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JButton jb_Ensamblar;
-    private javax.swing.JMenuItem jmi_AdminC;
     private javax.swing.JMenuItem jmi_AdminT;
     private javax.swing.JMenuItem jmi_CrearC;
     private javax.swing.JMenuItem jmi_CrearT;
