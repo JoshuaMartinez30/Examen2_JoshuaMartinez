@@ -1,7 +1,13 @@
 package examen2_joshuamartinez;
-public class Procesador extends Parte{
+
+import java.io.Serializable;
+
+public class Procesador extends Parte implements Serializable {
+
     private int nucleos;
     private double velocidad;
+
+    private static final long SerialVersionUID = 777L;
 
     public Procesador() {
     }
@@ -32,5 +38,5 @@ public class Procesador extends Parte{
     public String toString() {
         return "Procesador{" + "nucleos=" + nucleos + ", velocidad=" + velocidad + '}';
     }
-    
+
 }

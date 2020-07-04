@@ -1,8 +1,13 @@
 package examen2_joshuamartinez;
-public class Bateria extends Parte{
-    
+
+import java.io.Serializable;
+
+public class Bateria extends Parte implements Serializable {
+
     private int Capacidad;
     private String material;
+
+    private static final long SerialVersionUID = 777;
 
     public Bateria() {
     }
@@ -33,5 +38,5 @@ public class Bateria extends Parte{
     public String toString() {
         return "Bateria{" + "Capacidad=" + Capacidad + ", material=" + material + '}';
     }
-       
+
 }

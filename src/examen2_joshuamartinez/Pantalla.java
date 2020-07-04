@@ -1,6 +1,12 @@
 package examen2_joshuamartinez;
-public class Pantalla extends Parte{
+
+import java.io.Serializable;
+
+public class Pantalla extends Parte implements Serializable {
+
     private String Tactil, Tipo;
+
+    private static final long SerialVersionUID = 777L;
 
     public Pantalla() {
     }
@@ -31,6 +37,5 @@ public class Pantalla extends Parte{
     public String toString() {
         return "Pantalla{" + "Tactil=" + Tactil + ", Tipo=" + Tipo + '}';
     }
-    
-    
+
 }

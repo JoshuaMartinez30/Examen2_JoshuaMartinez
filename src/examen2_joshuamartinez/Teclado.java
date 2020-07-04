@@ -1,11 +1,14 @@
 package examen2_joshuamartinez;
 
 import java.awt.Color;
+import java.io.Serializable;
 
-public class Teclado extends Parte{
-    
+public class Teclado extends Parte implements Serializable {
+
     private String material;
     private String color;
+
+    private static final long SerialVersionUID = 777L;
 
     public Teclado() {
     }
@@ -37,6 +40,4 @@ public class Teclado extends Parte{
         return "Teclado{" + "material=" + material + ", color=" + color + '}';
     }
 
-    
-    
 }

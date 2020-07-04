@@ -1,8 +1,13 @@
 package examen2_joshuamartinez;
-public class DiscoDuro extends Parte{
-    
+
+import java.io.Serializable;
+
+public class DiscoDuro extends Parte implements Serializable {
+
     private int Tamaño;
     private String marca;
+
+    private static final long SerialVersionUID = 777L;
 
     public DiscoDuro() {
     }

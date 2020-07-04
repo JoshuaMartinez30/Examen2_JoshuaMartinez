@@ -1,11 +1,17 @@
 package examen2_joshuamartinez;
-public class RAM extends Parte{
+
+import java.io.Serializable;
+
+public class RAM extends Parte implements Serializable {
+
     private int Tamaño;
     private String Marca;
 
+    private static final long SerialVersionUID = 777L;
+
     public RAM() {
     }
- 
+
     public RAM(int Tamaño, String Marca, int Tiempo) {
         super(Tiempo);
         this.Tamaño = Tamaño;

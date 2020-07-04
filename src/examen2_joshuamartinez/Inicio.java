@@ -31,9 +31,9 @@ public class Inicio extends javax.swing.JFrame {
         ac.cargarArchivo();
         DefaultComboBoxModel modelo = (DefaultComboBoxModel) cbocomputadoras.getModel();
         modelo.addElement("");
-        for (int i = 0; i < ac.getListaComputadoras().size(); i++) {
-            lista2.add(ac.getListaComputadoras().get(i));
-            modelo.addElement(ac.getListaComputadoras().get(i));
+        for (int i = 0; i < ac.getListaComputadora().size(); i++) {
+            lista2.add(ac.getListaComputadora().get(i));
+            modelo.addElement(ac.getListaComputadora().get(i));
             cbocomputadoras.setModel(modelo);
         }
         mostrar();
@@ -122,6 +122,8 @@ public class Inicio extends javax.swing.JFrame {
         jLabel28 = new javax.swing.JLabel();
         btnEliminar = new javax.swing.JButton();
         JD_AdminC = new javax.swing.JDialog();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         grupoC = new javax.swing.ButtonGroup();
         jTextField13 = new javax.swing.JTextField();
         grupoTeclado = new javax.swing.ButtonGroup();
@@ -133,7 +135,7 @@ public class Inicio extends javax.swing.JFrame {
         jLabel33 = new javax.swing.JLabel();
         jb_Ensamblar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jt_Ensamblar = new javax.swing.JTable();
         instalacion = new javax.swing.JProgressBar();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -616,22 +618,32 @@ public class Inicio extends javax.swing.JFrame {
                 .addGap(34, 34, 34))
         );
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane3.setViewportView(jTextArea1);
+
         javax.swing.GroupLayout JD_AdminCLayout = new javax.swing.GroupLayout(JD_AdminC.getContentPane());
         JD_AdminC.getContentPane().setLayout(JD_AdminCLayout);
         JD_AdminCLayout.setHorizontalGroup(
             JD_AdminCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JD_AdminCLayout.createSequentialGroup()
+                .addContainerGap(73, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64))
         );
         JD_AdminCLayout.setVerticalGroup(
             JD_AdminCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(JD_AdminCLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         jTextField13.setText("jTextField13");
 
-        jLabel32.setText("Computadoras a ensamblar");
+        jLabel32.setText("Computadoras");
 
-        jLabel33.setText("Tecnicos disponibles");
+        jLabel33.setText("Tecnicos ");
 
         jb_Ensamblar.setText("Ensamblar");
         jb_Ensamblar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -640,7 +652,7 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jt_Ensamblar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -663,7 +675,7 @@ public class Inicio extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(jt_Ensamblar);
 
         javax.swing.GroupLayout JD_EnsamblajeLayout = new javax.swing.GroupLayout(JD_Ensamblaje.getContentPane());
         JD_Ensamblaje.getContentPane().setLayout(JD_EnsamblajeLayout);
@@ -676,11 +688,11 @@ public class Inicio extends javax.swing.JFrame {
                     .addGroup(JD_EnsamblajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel33)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(JD_EnsamblajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(cbocomputadoras, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cbotecnicos, javax.swing.GroupLayout.Alignment.LEADING, 0, 238, Short.MAX_VALUE))
+                        .addComponent(cbotecnicos, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(JD_EnsamblajeLayout.createSequentialGroup()
-                            .addComponent(jLabel32)
+                            .addGroup(JD_EnsamblajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel32)
+                                .addComponent(cbocomputadoras, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jb_Ensamblar, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(116, 116, 116))))
@@ -699,11 +711,12 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(cbotecnicos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addGroup(JD_EnsamblajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel32)
-                    .addComponent(jb_Ensamblar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cbocomputadoras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62))
+                    .addComponent(jb_Ensamblar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(JD_EnsamblajeLayout.createSequentialGroup()
+                        .addComponent(jLabel32)
+                        .addGap(18, 18, 18)
+                        .addComponent(cbocomputadoras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(77, 77, 77))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -839,7 +852,7 @@ public class Inicio extends javax.swing.JFrame {
             C.getPartes().add(pa);
             C.getPartes().add(pro);
             lista2.add(C);
-            ac.getListaComputadoras().add(C);
+            ac.setListaComputadora(C);
             modelo.addElement(C);
             cbocomputadoras.setModel(modelo);
             ac.escribirArchivo();
@@ -894,6 +907,14 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void jmi_EnsamblajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_EnsamblajeActionPerformed
+        jt_Ensamblar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Tiempo"
+            }
+        ));
         JD_Ensamblaje.setModal(true);
         JD_Ensamblaje.pack();
         JD_Ensamblaje.setLocationRelativeTo(null);
@@ -902,7 +923,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void jb_EnsamblarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_EnsamblarMouseClicked
         OEnsamblaje o = new OEnsamblaje((Computadora) cbocomputadoras.getSelectedItem(), (Tecnico) cbotecnicos.getSelectedItem());
-        Ensamblaje e = new Ensamblaje(o, jTable1, instalacion);
+        Ensamblaje e = new Ensamblaje(o, jt_Ensamblar, instalacion);
         Thread proceso = new Thread(e);
         proceso.start();
     }//GEN-LAST:event_jb_EnsamblarMouseClicked
@@ -1028,13 +1049,14 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JButton jb_Ensamblar;
     private javax.swing.JMenuItem jmi_AdminC;
@@ -1050,6 +1072,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JSpinner jsp_ProcesadorTiempo;
     private javax.swing.JSpinner jsp_RamTiempo;
     private javax.swing.JSpinner jsp_TecladoTiempo;
+    private javax.swing.JTable jt_Ensamblar;
     private javax.swing.JTable jt_ModificarT;
     private javax.swing.JRadioButton rg_NoTactil;
     private javax.swing.JRadioButton rg_Tactil;
