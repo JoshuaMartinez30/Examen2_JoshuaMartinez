@@ -1,4 +1,0 @@
-SE REPORTO UN FALLO A LAS: Fri Jul 03 21:37:03 CST 2020
-Davidfallo en ensamblar.
-Computadora con numero de serie: 1234
-------------------------------------------------------------------------
