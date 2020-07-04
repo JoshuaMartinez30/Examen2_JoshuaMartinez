@@ -1,8 +1,11 @@
 package examen2_joshuamartinez;
 
 import java.awt.Color;
+import java.io.Serializable;
+import java.util.ArrayList;
 
-public class Computadora {
+public class Computadora implements Serializable {
+
     private int serie, año;
     private String color;
     private String material;
@@ -12,6 +15,9 @@ public class Computadora {
     private Teclado teclado;
     private Pantalla pantalla;
     private Procesador procesador;
+    private ArrayList<Parte> partes = new ArrayList();
+
+    private static final long SerialVersionUID = 777L;
 
     public Computadora() {
     }
@@ -109,11 +115,17 @@ public class Computadora {
         this.procesador = procesador;
     }
 
-    @Override
-    public String toString() {
-        return "Computadora{" + "serie=" + serie + ", a\u00f1o=" + año + ", color=" + color + ", material=" + material + ", ram=" + ram + ", disco=" + disco + ", bateria=" + bateria + ", teclado=" + teclado + ", pantalla=" + pantalla + ", procesador=" + procesador + '}';
+    public ArrayList<Parte> getPartes() {
+        return partes;
     }
 
-    
-        
+    public void setPartes(ArrayList<Parte> partes) {
+        this.partes = partes;
+    }
+
+    @Override
+    public String toString() {
+        return "serie=" + serie;
+    }
+
 }

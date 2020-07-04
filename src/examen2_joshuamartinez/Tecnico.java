@@ -46,7 +46,7 @@ public class Tecnico {
 
     @Override
     public String toString() {
-        return "Tecnico{" + "Nombre=" + Nombre + ", Edad=" + Edad + ", Genero=" + Genero + ", cantidad=" + cantidad + '}';
+        return Nombre;
     }
     
 }

@@ -7,16 +7,16 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class AdminComputadora {
+public class AdminComputadora  {
 
     private ArrayList<Computadora> ListaComputadoras = new ArrayList();
     private File archivo = null;
 
-    private static final long SerialVersionUID = 777L;
 
     public AdminComputadora(String path) {
         archivo = new File(path);
